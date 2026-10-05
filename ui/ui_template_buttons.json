@@ -1,0 +1,13 @@
+{
+  "namespace": "myui",
+
+  "small_button": {
+    "type": "button",
+    "size": [ 140, 24 ],
+    "default_texture": "textures/ui/small_button_default",
+    "hover_texture": "textures/ui/small_button_hover",
+    "pressed_texture": "textures/ui/small_button_pressed",
+    "text": "Button",
+    "color": [ 1, 1, 1 ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "namespace": "myui",
+
+  "pause_screen": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/black_overlay",
+          "size": [ "100%", "100%" ],
+          "alpha": 0.55
+        }
+      },
+      {
+        "panel_root": {
+          "type": "panel",
+          "size": [ 340, 420 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "main_bg": {
+                "type": "image",
+                "texture": "textures/ui/panel_bg",
+                "size": [ "100%", "100%" ],
+                "layer": 1
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "text": "Pause Menu",
+                "size": [ "default", 18 ],
+                "color": [ 1, 1, 1 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 16 ],
+                "layer": 5
+              }
+            },
+            {
+              "button_row": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ 220, 220 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [ 0, 12 ],
+                "controls": [
+                  {
+                    "mods_button@myui.base_button": {
+                      "text": "Mods"
+                    }
+                  },
+                  {
+                    "preview_button@myui.base_button": {
+                      "text": "Armor Preview"
+                    }
+                  },
+                  {
+                    "map_button@myui.base_button": {
+                      "text": "Chunk Map"
+                    }
+                  },
+                  {
+                    "settings_button@myui.base_button": {
+                      "text": "Settings"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "base_button": {
+    "type": "button",
+    "size": [ 220, 34 ],
+    "default_texture": "textures/ui/button_default",
+    "hover_texture": "textures/ui/button_hover",
+    "pressed_texture": "textures/ui/button_pressed",
+    "text": "Button",
+    "color": [ 1, 1, 1 ],
+    "layer": 10
+  }
+}

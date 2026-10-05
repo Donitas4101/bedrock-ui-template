@@ -1,0 +1,11 @@
+{
+  "namespace": "myui",
+
+  "toggle_default": {
+    "type": "toggle",
+    "size": [ 26, 26 ],
+    "default_state": false,
+    "toggle_on_texture": "textures/ui/toggle_on",
+    "toggle_off_texture": "textures/ui/toggle_off"
+  }
+}

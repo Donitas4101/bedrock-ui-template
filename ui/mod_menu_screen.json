@@ -1,0 +1,136 @@
+{
+  "namespace": "myui",
+
+  "mod_menu_screen": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "darken": {
+          "type": "image",
+          "texture": "textures/ui/black_overlay",
+          "size": [ "100%", "100%" ],
+          "alpha": 0.5
+        }
+      },
+      {
+        "mod_panel": {
+          "type": "panel",
+          "size": [ 420, 460 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "panel_bg": {
+                "type": "image",
+                "texture": "textures/ui/mod_panel_bg",
+                "size": [ "100%", "100%" ],
+                "layer": 1
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "text": "Mods",
+                "size": [ "default", 18 ],
+                "color": [ 1, 1, 1 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 16 ],
+                "layer": 3
+              }
+            },
+            {
+              "toggle_list": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ 260, 260 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [ 0, 0 ],
+                "controls": [
+                  {
+                    "toggle_debug@myui.toggle_row": {
+                      "label": "Debug Screen"
+                    }
+                  },
+                  {
+                    "toggle_map@myui.toggle_row": {
+                      "label": "Chunk Map"
+                    }
+                  },
+                  {
+                    "toggle_night@myui.toggle_row": {
+                      "label": "Night Vision"
+                    }
+                  },
+                  {
+                    "toggle_inventory@myui.toggle_row": {
+                      "label": "Inventory Preview"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "close_button@myui.base_button": {
+                "text": "Close",
+                "size": [ 120, 30 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, -24 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "toggle_row": {
+    "type": "panel",
+    "size": [ 260, 28 ],
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "text": "#label",
+          "size": [ "default", 14 ],
+          "color": [ 1, 1, 1 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [ 0, 0 ],
+          "bindings": [
+            {
+              "binding_name": "#label",
+              "binding_name_override": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "toggle": {
+          "type": "toggle",
+          "size": [ 26, 26 ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -4, 0 ],
+          "default_state": false,
+          "toggle_on_texture": "textures/ui/toggle_on",
+          "toggle_off_texture": "textures/ui/toggle_off"
+        }
+      }
+    ]
+  },
+
+  "base_button": {
+    "type": "button",
+    "size": [ 180, 36 ],
+    "default_texture": "textures/ui/button_default",
+    "hover_texture": "textures/ui/button_hover",
+    "pressed_texture": "textures/ui/button_pressed",
+    "text": "Button",
+    "color": [ 1, 1, 1 ],
+    "layer": 10
+  }
+}
