@@ -8,6 +8,8 @@
     "hover_texture": "textures/ui/small_button_hover",
     "pressed_texture": "textures/ui/small_button_pressed",
     "text": "Button",
-    "color": [ 1, 1, 1 ]
+    "color": [ 1, 1, 1 ],
+    "navigation_mode": "automatic",
+    "gamepad_focus_precedence": 3
   }
 }
